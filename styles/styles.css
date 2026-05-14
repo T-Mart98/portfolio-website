@@ -99,19 +99,36 @@ a {
 }
 
 .hero {
-    margin-block-end: var(--space-xl);
+    margin-block: var(--space-2xl);
 }
 
 section {
     padding-block: var(--space-xs);
 }
 
+.about-preview {
+    margin-block-end: var(--space-2xl);
+}
+
+.page-intro h2 {
+    margin-block: var(--space-2xl);
+}
+
 /* 5. Components (.btn, .card, .nav) */
+
+.logo {
+    display: none;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     padding: var(--space-md);
     margin-block-end: var(--space-lg);
+}
+
+.hero-banner-desktop {
+    display: none;
 }
 
 footer {
@@ -122,6 +139,14 @@ footer {
     line-height: 3;
 }
 
+.featured-projects h2 {
+    text-align: center;
+}
+
+.hero-banner-mobile img {
+    margin-block: var(--space-2xl);
+}
+
 footer img {
     margin-block-end: var(--space-lg);
 }
@@ -129,6 +154,10 @@ footer img {
 nav ul, footer ul {
     list-style: none;
 }
+
+.desktop {
+    display: none;
+    }
 
 .primary {
     background-color: var(--color-primary);
@@ -174,18 +203,36 @@ button a {
 
 }
 
-.project img {
-    height: 25rem;
+.hero img {
+    margin: auto;
+}
+
+.card-project img {
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    
+}
+
+.card-project {
+    border-radius: var(--radius-lg);
+    margin-block: var(--space-xl);
+    transition: transform 0.2s ease;
+    background-color: var(--color-accent);
+    box-shadow: var(--shadow-md);
+}
+
+.card-project button {
+    margin-inline-start: 5.5rem;
 }
 
 .card {
     border-radius: var(--radius-lg);
     width: 15.875rem;
-    margin-block: var(--space-lg);
+    margin-block: var(--space-xl);
     transition: transform 0.2s ease;
     background-color: var(--color-accent);
     box-shadow: var(--shadow-md);
-    margin-inline-start: var(--space-lg);
+    margin-inline: auto;
 }
 
 .card-body {
@@ -205,3 +252,82 @@ button a {
 }
 
 /* Media Queries */
+@media screen and (min-width: 768px) {
+    .card {
+         margin: auto;
+         margin-block: var(--space-lg);
+    }
+
+    .hero-banner-mobile img {
+        margin: auto;
+    }
+
+    .hero-banner-mobile img {
+        margin-block: var(--space-2xl);
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+        margin-inline-end: var(--space-sm);
+    }
+
+    .desktop p {
+        margin-block-start: var(--space-md);
+    }
+
+    .logo-mobile {
+        display: none;
+    }
+
+    .logo {
+        display: flex;
+    }
+
+    .card-project button{
+        margin-inline-start: 17rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero-banner-mobile img {
+        display: none;
+    }
+
+    .hero-banner-desktop {
+        display: block;
+    }
+
+    .hero {
+        margin-block: var(--space-lg);
+    }
+
+    .card img {
+        height: 300px;
+        width: 300px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+    .card {
+        display: flex;
+        width: 600px;
+        height: 300px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    
+    }
+
+    .secondary {
+        margin-inline-start: var(--space-2xl);
+        margin-block-start: var(--space-xl);
+    }
+
+    h1 {
+        font-size: var(--text-3xl);
+    }
+
+}
