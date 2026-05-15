@@ -36,14 +36,14 @@
   --container-padding:  1.5rem;
 
   /* ── Borders & Radius ─────────────────────── */
-  --radius-sm:  4px;
-  --radius-md:  8px;
-  --radius-lg:  16px;
+  --radius-sm:  0.25rem;
+  --radius-md:  0.5rem;
+  --radius-lg:  1rem;
   --radius-pill: 999px; /* fully rounded pill shapes  */
 
   /* ── Shadows ──────────────────────────────── */
-  --shadow-sm: 3px 4px 10px rgba(50, 50, 50, 25%);
-  --shadow-md: 15px 15px 15px rgba(50, 50, 50, 25%);
+  --shadow-sm: 0.188rem 0.25rem 0.625rem rgba(50, 50, 50, 25%);
+  --shadow-md: 0.938rem 0.938rem 0.938rem rgba(50, 50, 50, 25%);
 
 }
 
@@ -186,13 +186,41 @@ nav ul, footer ul {
     transform: translateY(-2px);
 }
 
+.primary:active {
+    background-color: var(--color-primary-dark);
+}
+
 .secondary:hover {
     background-color: var(--color-bg-alt);
     transform: translateY(-1px);
 }
 
+.secondary:active {
+    background-color: var(--color-bg-alt);
+}
+
+nav a:hover {
+    color: var(--color-text-muted);
+}
+
+nav a:active {
+    color: var(--color-text-muted);
+}
+
 button a {
     color: var(--color-text);
+}
+
+.contact a {
+    color: var(--color-primary);
+}
+
+.contact a:hover {
+    color: var(--color-primary-dark);
+}
+
+.contact a:active {
+    color: var(--color-primary-dark);
 }
 
 .card img {
@@ -214,6 +242,7 @@ button a {
 }
 
 .card-project {
+    width: 20.625rem;
     border-radius: var(--radius-lg);
     margin-block: var(--space-xl);
     transition: transform 0.2s ease;
@@ -222,7 +251,7 @@ button a {
 }
 
 .card-project button {
-    margin-inline-start: 5.5rem;
+    margin-inline-start: 5rem;
 }
 
 .card {
@@ -287,8 +316,23 @@ button a {
         display: flex;
     }
 
+    .card-project {
+        display: flex;
+        width: 45rem;
+        margin: auto;
+        margin-block: var(--space-2xl);
+    }
+
+    .card-project figure {
+        display: flex;
+    }
+
+    .card-project img {
+        border-bottom-left-radius: 1rem;
+    }
+
     .card-project button{
-        margin-inline-start: 17rem;
+        margin-inline-start: 7rem;
     }
 }
 
@@ -306,18 +350,18 @@ button a {
     }
 
     .card img {
-        height: 300px;
-        width: 300px;
-        border-top-left-radius: 8px;
-        border-bottom-left-radius: 8px;
+        height: 18.75rem;
+        width: 18.75rem;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
     }
 
     .card {
         display: flex;
-        width: 600px;
-        height: 300px;
-        border-top-right-radius: 8px;
-        border-bottom-right-radius: 8px;
+        width: 37.5rem;
+        height: 18.75rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
     
     }
 
@@ -330,4 +374,11 @@ button a {
         font-size: var(--text-3xl);
     }
 
+    .card-project {
+        width: 61rem;
+    }
+
+    .card-project button{
+        margin-inline-start: 12rem;
+    }
 }
