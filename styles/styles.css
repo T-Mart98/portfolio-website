@@ -115,7 +115,6 @@ section {
 }
 
 /* 5. Components (.btn, .card, .nav) */
-
 .logo {
     display: none;
 }
@@ -178,7 +177,8 @@ nav ul, footer ul {
     font-family: var(--font-body);
     font-size: var(--text-sm);
     box-shadow: var(--shadow-sm);
-    margin-inline-start: var(--space-lg);
+    /* margin-inline-start: var(--space-lg); */
+    
 }
 
 .primary:hover {
@@ -248,11 +248,12 @@ button a {
     transition: transform 0.2s ease;
     background-color: var(--color-accent);
     box-shadow: var(--shadow-md);
+    margin-inline: auto;
 }
 
-.card-project button {
+/* .card-project button {
     margin-inline-start: 5rem;
-}
+} */
 
 .card {
     border-radius: var(--radius-lg);
@@ -266,6 +267,10 @@ button a {
 
 .card-body {
     padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
 }
 
 .skills p {
@@ -282,6 +287,23 @@ button a {
 
 /* Media Queries */
 @media screen and (min-width: 768px) {
+    .card img {
+        height: 18.75rem;
+        width: 56.25rem;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        border-top-right-radius: 0rem;
+    }
+
+    .card {
+        display: flex;
+        width: 37.5rem;
+        height: 18.75rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    
+    }
+    
     .card {
          margin: auto;
          margin-block: var(--space-lg);
@@ -323,17 +345,14 @@ button a {
         margin-block: var(--space-2xl);
     }
 
-    .card-project figure {
-        display: flex;
-    }
-
     .card-project img {
         border-bottom-left-radius: 1rem;
+        border-top-right-radius: 0rem;
     }
 
-    .card-project button{
+    /* .card-project button{
         margin-inline-start: 7rem;
-    }
+    } */
 }
 
 @media screen and (min-width: 1024px) {
@@ -351,24 +370,25 @@ button a {
 
     .card img {
         height: 18.75rem;
-        width: 18.75rem;
+        width: 62.5rem;
         border-top-left-radius: 0.5rem;
         border-bottom-left-radius: 0.5rem;
+        border-top-right-radius: 0rem;
     }
 
     .card {
         display: flex;
-        width: 37.5rem;
+        width: 50rem;
         height: 18.75rem;
         border-top-right-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem;
     
     }
 
-    .secondary {
+    /* .secondary {
         margin-inline-start: var(--space-2xl);
         margin-block-start: var(--space-xl);
-    }
+    } */
 
     h1 {
         font-size: var(--text-3xl);
@@ -378,7 +398,11 @@ button a {
         width: 61rem;
     }
 
-    .card-project button{
+    /* .card-project button{
         margin-inline-start: 12rem;
+    } */
+
+        .card-body {
+        justify-content: flex-start;
     }
 }
