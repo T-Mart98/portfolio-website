@@ -98,7 +98,6 @@ a, nav ul, footer ul {
   content: "📞 ";
 }
 
-
 /* Layout Utilities (.container) */
 .container {
     width: 100%;
@@ -188,6 +187,19 @@ footer img {
 .secondary:active, .secondary:hover  {
     background-color: var(--color-bg-alt);
 }
+
+.desktop a, footer a, .contact a {
+    padding-block: 1.563rem;
+}
+
+.desktop a, footer a {
+    padding-inline: 0.313rem;
+}
+
+.mobile a {
+    padding: var(--space-xs);
+    
+}    
 
 nav a:hover, nav a:active {
     color: var(--color-text-muted);
@@ -340,7 +352,6 @@ button a {
         height: 18.75rem;
         border-top-right-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem;
-    
     }
 
     h1 {
