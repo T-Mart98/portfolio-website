@@ -85,7 +85,7 @@ h3 {
     margin-block-end: var(--space-md);
 }
 
-a {
+a, nav ul, footer ul {
     text-decoration: none;
     list-style: none;
 }
@@ -98,7 +98,7 @@ a {
     padding-inline: var(--container-padding);
 }
 
-.hero {
+.hero, .page-intro h2 {
     margin-block: var(--space-2xl);
 }
 
@@ -110,12 +110,8 @@ section {
     margin-block-end: var(--space-2xl);
 }
 
-.page-intro h2 {
-    margin-block: var(--space-2xl);
-}
-
 /* 5. Components (.btn, .card, .nav) */
-.logo {
+.logo, .hero-banner-desktop, .desktop {
     display: none;
 }
 
@@ -124,10 +120,6 @@ header {
     justify-content: space-between;
     padding: var(--space-md);
     margin-block-end: var(--space-lg);
-}
-
-.hero-banner-desktop {
-    display: none;
 }
 
 footer {
@@ -142,68 +134,53 @@ footer {
     text-align: center;
 }
 
-.hero-banner-mobile img {
-    margin-block: var(--space-2xl);
+.hero-banner-mobile {
+    margin-block-end: 14rem;
 }
 
 footer img {
     margin-block-end: var(--space-lg);
 }
 
-nav ul, footer ul {
-    list-style: none;
-}
-
-.desktop {
-    display: none;
-    }
-
-.primary {
-    background-color: var(--color-primary);
+.primary, .secondary {
     padding: var(--space-sm) var(--space-md);
-    margin-block: var(--space-lg);
     border-radius: var(--radius-md);
     font-family: var(--font-body);
     font-size: var(--text-sm);
     box-shadow: var(--shadow-sm);
+}
+
+.primary {
+    background-color: var(--color-primary);
+    margin-block: var(--space-lg);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .secondary {
     background-color: var(--color-bg);
-    padding: var(--space-sm) var(--space-md);
     margin-block: var(--space-md);
-    border-radius: var(--radius-md);
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    box-shadow: var(--shadow-sm);
-    /* margin-inline-start: var(--space-lg); */
-    
+    color: var(--color-text);
+    border: 0.125rem solid var(--color-text);
+    margin: auto;
 }
 
 .primary:hover {
-    background-color: var(--color-primary-dark);
     transform: translateY(-2px);
 }
 
-.primary:active {
+.primary:active, .primary:hover {
     background-color: var(--color-primary-dark);
 }
 
 .secondary:hover {
-    background-color: var(--color-bg-alt);
     transform: translateY(-1px);
 }
 
-.secondary:active {
+.secondary:active, .secondary:hover  {
     background-color: var(--color-bg-alt);
 }
 
-nav a:hover {
-    color: var(--color-text-muted);
-}
-
-nav a:active {
+nav a:hover, nav a:active {
     color: var(--color-text-muted);
 }
 
@@ -215,11 +192,7 @@ button a {
     color: var(--color-primary);
 }
 
-.contact a:hover {
-    color: var(--color-primary-dark);
-}
-
-.contact a:active {
+.contact a:hover, .contact a:active {
     color: var(--color-primary-dark);
 }
 
@@ -228,7 +201,6 @@ button a {
     border-top-left-radius: 0.75rem;
     border-top-right-radius: 0.75rem;
     height: 12.938rem;
-
 }
 
 .hero img {
@@ -238,31 +210,22 @@ button a {
 .card-project img {
     border-top-left-radius: 0.75rem;
     border-top-right-radius: 0.75rem;
-    
+}
+
+.card-project, .card {
+    border-radius: var(--radius-lg);
+    margin-block: var(--space-xl);
+    background-color: var(--color-accent);
+    box-shadow: var(--shadow-md);
+    margin-inline: auto;
 }
 
 .card-project {
     width: 20.625rem;
-    border-radius: var(--radius-lg);
-    margin-block: var(--space-xl);
-    transition: transform 0.2s ease;
-    background-color: var(--color-accent);
-    box-shadow: var(--shadow-md);
-    margin-inline: auto;
 }
 
-/* .card-project button {
-    margin-inline-start: 5rem;
-} */
-
 .card {
-    border-radius: var(--radius-lg);
     width: 15.875rem;
-    margin-block: var(--space-xl);
-    transition: transform 0.2s ease;
-    background-color: var(--color-accent);
-    box-shadow: var(--shadow-md);
-    margin-inline: auto;
 }
 
 .card-body {
@@ -270,10 +233,9 @@ button a {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
 }
 
-.skills p {
+.card-body p, .skills p {
     margin-block-end: var(--space-md);
 }
 
@@ -283,6 +245,10 @@ button a {
 
 .about, .education, .skills, .contact {
     margin-block: var(--space-xl);
+}
+
+[tabindex]:focus {
+  outline: 3px solid rgb(0, 68, 255);
 }
 
 /* Media Queries */
@@ -301,23 +267,17 @@ button a {
         height: 18.75rem;
         border-top-right-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem;
-    
     }
     
     .card {
-         margin: auto;
-         margin-block: var(--space-lg);
+         margin-block: var(--space-xl);
     }
 
-    .hero-banner-mobile img {
-        margin: auto;
-    }
-
-    .hero-banner-mobile img {
+    .hero-banner-mobile img, .card-project {
         margin-block: var(--space-2xl);
     }
 
-    .mobile {
+    .mobile, .logo-mobile {
         display: none;
     }
 
@@ -330,29 +290,18 @@ button a {
         margin-block-start: var(--space-md);
     }
 
-    .logo-mobile {
-        display: none;
-    }
-
-    .logo {
+    .logo, .card-project, .card-project figure {
         display: flex;
     }
 
     .card-project {
-        display: flex;
         width: 45rem;
-        margin: auto;
-        margin-block: var(--space-2xl);
     }
 
     .card-project img {
         border-bottom-left-radius: 1rem;
         border-top-right-radius: 0rem;
     }
-
-    /* .card-project button{
-        margin-inline-start: 7rem;
-    } */
 }
 
 @media screen and (min-width: 1024px) {
@@ -385,11 +334,6 @@ button a {
     
     }
 
-    /* .secondary {
-        margin-inline-start: var(--space-2xl);
-        margin-block-start: var(--space-xl);
-    } */
-
     h1 {
         font-size: var(--text-3xl);
     }
@@ -398,11 +342,7 @@ button a {
         width: 61rem;
     }
 
-    /* .card-project button{
-        margin-inline-start: 12rem;
-    } */
-
-        .card-body {
+    .card-body {
         justify-content: flex-start;
     }
 }
