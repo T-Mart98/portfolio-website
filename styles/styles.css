@@ -90,6 +90,15 @@ a, nav ul, footer ul {
     list-style: none;
 }
 
+.contact a[href^="mailto"]::before {
+  content: "📧 ";
+}
+
+.contact a[href^="tel"]::before {
+  content: "📞 ";
+}
+
+
 /* Layout Utilities (.container) */
 .container {
     width: 100%;
