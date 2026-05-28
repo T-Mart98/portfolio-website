@@ -13,11 +13,8 @@ Portfolio Website by Tyler Martinez:
 Tyler Martinez | Front-End Engineer
 
 ### Links
-<<<<<<< HEAD
-- Live Site URL: [Live Site URL](https://t-mart98.github.io/product-review-card/)
-=======
-- Live Site URL: [Add live site URL here](https://tylermartinez.me)
->>>>>>> 6c5881a55ba3e0e1ed6e705eabc9fc0f5dea4580
+
+- Live Site URL: [Live Site URL](https://tylermartinez.me)
 
 ## My process
 
