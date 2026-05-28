@@ -30,4 +30,5 @@ Tyler Martinez | Front-End Engineer
 ## Future of the portfolio, aka JavaScript
 
 -add working hamburger menu for mobile
+
 -add nice fade-in transition for hero banner on homepage/more transitions and animations in general
